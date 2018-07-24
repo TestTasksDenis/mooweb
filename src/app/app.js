@@ -28,8 +28,6 @@ window.onload = function () {
         if (currentZip.length > 0) {
             const isDuplicate = checkDuplicate(currentZip[0]);
 
-            console.log(isDuplicate);
-
             if (currentZip.length > 0 && isDuplicate !== -1) {
                 addItem(currentZip[0]);
                 clearForm(this);
