@@ -47,25 +47,24 @@
           border-radius: 3px;
           border: 1px solid transparent;
           width: 100px;
-        }
 
-        .zip__city-delete {
-          width: 18px;
-          height: 18px;
-          background-color: red;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        &.zip__city--active {
-          .zip__city-name {
+          &.zip__city-name--active {
             font: {
               weight: 700;
             };
             border: 1px solid #3f87a6;
           }
+        }
+
+        .zip__city-delete {
+          width: 12px;
+          height: 12px;
+          background: url("./img/close.svg") no-repeat center;
+          margin-left: 5px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }

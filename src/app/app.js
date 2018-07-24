@@ -17,7 +17,7 @@ window.onload = function () {
         }
     ];
 
-    const zipForm = document.querySelector('.zip__form');
+    const zipForm = document.querySelector('.form');
 
     function addCity(e) {
         e.preventDefault();
@@ -30,11 +30,15 @@ window.onload = function () {
             addItem(currentZip[0]);
             clearForm(this);
 
-            document.querySelectorAll('.zip__city').forEach((item) => item.addEventListener('click', () => {
+            document.querySelectorAll('.zip__city-name').forEach((item) => item.addEventListener('click', () => {
                 setZip(item)
             }));
 
-            document.querySelectorAll('.zip__city').forEach((item) => {
+            document.querySelectorAll('.zip__city-delete').forEach((item) => item.addEventListener('click', () => {
+                deleteItem(item)
+            }));
+
+            document.querySelectorAll('.zip__city-name').forEach((item) => {
                 if (currentZip[0].id === parseInt(item.getAttribute("data-id"))) {
                     setActive(item);
                 }
@@ -77,6 +81,8 @@ window.onload = function () {
     }
 
     function clearForm(form) {
+        form = form || document.querySelector('.form');
+
         form.querySelectorAll('.form__input--text').forEach((input) => {
             input.value = '';
         });
@@ -91,8 +97,13 @@ window.onload = function () {
     }
 
     function setActive(city) {
-        document.querySelectorAll('.zip__city').forEach((item) => item.classList.remove('zip__city--active'));
-        city.classList.add('zip__city--active');
+        document.querySelectorAll('.zip__city-name').forEach((item) => item.classList.remove('zip__city-name--active'));
+        city.classList.add('zip__city-name--active');
+    }
+
+    function deleteItem(item) {
+        item.closest('.zip__city').remove();
+        clearForm();
     }
 
     zipForm.addEventListener('submit', addCity);
