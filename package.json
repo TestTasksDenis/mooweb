@@ -1,0 +1,48 @@
+{
+  "name": "victoria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexar1988/victoria.git"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "html",
+    "javascript"
+  ],
+  "author": "Denis Lubchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rexar1988/victoria/issues"
+  },
+  "homepage": "https://github.com/rexar1988/victoria#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "autoprefixer": "^8.6.3",
+    "babel-loader": "^8.0.0-beta.3",
+    "case-sensitive-paths-webpack-plugin": "^2.1.2",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "postcss-loader": "^2.1.5",
+    "resolve-url-loader": "^2.3.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.6",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

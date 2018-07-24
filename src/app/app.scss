@@ -1,0 +1,13 @@
+// Plugins
+@import '../plugins/normalize/normalize.scss';
+@import '../plugins/framework/_maledict.scss';
+
+// Reboot
+@import './_boot.scss';
+
+// Styles
+@import './blocks/header/_header.desktop.scss';
+@import './pages/home/_home.desktop.scss';
+
+@import './blocks/header/_header.mobile.scss';
+@import './pages/home/_home.mobile.scss';
