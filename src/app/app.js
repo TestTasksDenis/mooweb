@@ -21,7 +21,7 @@ window.onload = function () {
 
         const zipInput = parseInt(this.querySelector('#zip-field').value);
         const currentZip = cities.filter(code => code.zip === zipInput);
-        const isDuble = checkDuplicate(currentZip[0].city);
+        let isDuble = checkDuplicate(currentZip[0].city);
 
         console.log(isDuble);
 
@@ -50,15 +50,14 @@ window.onload = function () {
 
     function checkDuplicate(value) {
         const currentCities = document.querySelectorAll('.zip__city');
-        console.log(currentCities);
 
-        if (currentCities.length > 1) {
-            for (let i = currentCities.length; i--;) {
-                if (currentCities[i].textContent === value) {
-                    return -1;
-                }
+        for (let i = currentCities.length; i--;) {
+            if (currentCities[i].textContent === value) {
+                return -1;
             }
         }
+
+        return 1;
     }
 
     zipForm.addEventListener('submit', addCity);
