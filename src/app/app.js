@@ -28,6 +28,8 @@ window.onload = function () {
         if (currentZip.length > 0) {
             const isDuplicate = checkDuplicate(currentZip[0]);
 
+            console.log(isDuplicate);
+
             if (currentZip.length > 0 && isDuplicate !== -1) {
                 addItem(currentZip[0]);
                 clearForm(this);
@@ -73,10 +75,11 @@ window.onload = function () {
     }
 
     function checkDuplicate(value) {
-        const currentCities = document.querySelectorAll('.zip__city');
+        const currentCities = document.querySelectorAll('.zip__city-name');
 
         for (let i = currentCities.length; i--;) {
             if (parseInt(currentCities[i].getAttribute("data-id")) === value.id) {
+                alert('This zip code has exist!');
                 return -1;
             }
         }
