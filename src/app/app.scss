@@ -6,6 +6,8 @@
 @import './_boot.scss';
 
 // Styles
+@import './shared/form';
+
 @import './blocks/header/_header.desktop.scss';
 @import './pages/home/_home.desktop.scss';
 

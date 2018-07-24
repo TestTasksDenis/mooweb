@@ -1,9 +1,45 @@
-.test {
-  background: url("./img/bg.jpg") no-repeat;
-  width: 1440px;
-  height: 2160px;
-}
+#home {
+  padding-top: 50px;
 
-body {
-  font-weight: 400;
+  h1 {
+    color: #333366;
+    font: {
+      weight: 700;
+      size: 24px;
+    };
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    margin-bottom: 40px;
+  }
+
+  .zip {
+    display: flex;
+
+    .zip__form {
+      flex-basis: 300px;
+      flex-shrink: 0;
+      padding: 15px;
+      background-color: #ececec;
+      transition: box-shadow 0.4s;
+
+      &:hover {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+      }
+    }
+
+    .zip__list {
+      flex-basis: 100%;
+      padding-left: 25px;
+
+      ul {
+        list-style: none;
+
+        li {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
 }

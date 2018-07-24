@@ -81,21 +81,22 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/app.scss");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/app.scss":
-/*!**********************!*\
-  !*** ./app/app.scss ***!
-  \**********************/
+/***/ "./app/app.js":
+/*!********************!*\
+  !*** ./app/app.js ***!
+  \********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+"use strict";
+
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=styles.js.map
+//# sourceMappingURL=scripts.js.map

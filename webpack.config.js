@@ -14,7 +14,8 @@ module.exports = {
     devtool: 'source-map',
     context: path.resolve(__dirname, 'src'),
     entry: {
-        styles: './app/app.scss'
+        styles: './app/app.scss',
+        scripts: './app/app.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

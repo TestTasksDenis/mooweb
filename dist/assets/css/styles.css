@@ -557,6 +557,69 @@ template {
   src: url(../fonts/Lato-Hairline/Lato-Hairline.eot), url(../fonts/Lato-Hairline/Lato-Hairline.woff) format("woff"), url(../fonts/Lato-Hairline/Lato-Hairline.woff2) format("woff2"), url(../fonts/Lato-Hairline/Lato-Hairline.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 200;
+  src: url(../fonts/Lato-Thin/Lato-Thin.eot), url(../fonts/Lato-Thin/Lato-Thin.woff) format("woff"), url(../fonts/Lato-Thin/Lato-Thin.woff2) format("woff2"), url(../fonts/Lato-Thin/Lato-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/Lato-Light/Lato-Light.eot), url(../fonts/Lato-Light/Lato-Light.woff) format("woff"), url(../fonts/Lato-Light/Lato-Light.woff2) format("woff2"), url(../fonts/Lato-Light/Lato-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Lato-Regular/Lato-Regular.eot), url(../fonts/Lato-Regular/Lato-Regular.woff) format("woff"), url(../fonts/Lato-Regular/Lato-Regular.woff2) format("woff2"), url(../fonts/Lato-Regular/Lato-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/Lato-Italic/Lato-Italic.eot), url(../fonts/Lato-Italic/Lato-Italic.woff) format("woff"), url(../fonts/Lato-Italic/Lato-Italic.woff2) format("woff2"), url(../fonts/Lato-Italic/Lato-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Lato-Medium/Lato-Medium.eot), url(../fonts/Lato-Medium/Lato-Medium.woff) format("woff"), url(../fonts/Lato-Medium/Lato-Medium.woff2) format("woff2"), url(../fonts/Lato-Medium/Lato-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/Lato-Semibold/Lato-Semibold.eot), url(../fonts/Lato-Semibold/Lato-Semibold.woff) format("woff"), url(../fonts/Lato-Semibold/Lato-Semibold.woff2) format("woff2"), url(../fonts/Lato-Semibold/Lato-Semibold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Lato-Bold/Lato-Bold.eot), url(../fonts/Lato-Bold/Lato-Bold.woff) format("woff"), url(../fonts/Lato-Bold/Lato-Bold.woff2) format("woff2"), url(../fonts/Lato-Bold/Lato-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 800;
+  src: url(../fonts/Lato-Heavy/Lato-Heavy.eot), url(../fonts/Lato-Heavy/Lato-Heavy.woff) format("woff"), url(../fonts/Lato-Heavy/Lato-Heavy.woff2) format("woff2"), url(../fonts/Lato-Heavy/Lato-Heavy.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/Lato-Black/Lato-Black.eot), url(../fonts/Lato-Black/Lato-Black.woff) format("woff"), url(../fonts/Lato-Black/Lato-Black.woff2) format("woff2"), url(../fonts/Lato-Black/Lato-Black.ttf) format("truetype");
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
