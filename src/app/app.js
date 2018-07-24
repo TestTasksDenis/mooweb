@@ -110,20 +110,20 @@ window.onload = function () {
         clearForm();
     }
 
-    zipForm.addEventListener('submit', addCity);
-
     function availableCodes(array) {
         const ul = document.createElement('ul');
 
         array.forEach((item) => {
             const li = document.createElement('li');
 
-            li.appendChild(document.createTextNode(`${item.zip} - ${item.city}`));
+            li.appendChild(document.createTextNode(`${item.zip}: ${item.city}`));
             ul.appendChild(li);
         });
 
         document.querySelector('footer').appendChild(ul);
     }
+
+    zipForm.addEventListener('submit', addCity);
 
     availableCodes(cities);
 };
