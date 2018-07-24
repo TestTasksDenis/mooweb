@@ -24,27 +24,32 @@ window.onload = function () {
 
         const zipInput = parseInt(this.querySelector('#zip-field').value);
         const currentZip = cities.filter(code => code.zip === zipInput);
-        const isDuplicate = checkDuplicate(currentZip[0]);
 
-        if (currentZip.length > 0 && isDuplicate !== -1) {
-            addItem(currentZip[0]);
-            clearForm(this);
+        if (currentZip.length > 0) {
+            const isDuplicate = checkDuplicate(currentZip[0]);
 
-            document.querySelectorAll('.zip__city-name').forEach((item) => item.addEventListener('click', () => {
-                setZip(item)
-            }));
+            if (currentZip.length > 0 && isDuplicate !== -1) {
+                addItem(currentZip[0]);
+                clearForm(this);
 
-            document.querySelectorAll('.zip__city-delete').forEach((item) => item.addEventListener('click', () => {
-                deleteItem(item)
-            }));
+                document.querySelectorAll('.zip__city-name').forEach((item) => item.addEventListener('click', () => {
+                    setZip(item)
+                }));
 
-            document.querySelectorAll('.zip__city-name').forEach((item) => {
-                if (currentZip[0].id === parseInt(item.getAttribute("data-id"))) {
-                    setActive(item);
-                }
-            });
+                document.querySelectorAll('.zip__city-delete').forEach((item) => item.addEventListener('click', () => {
+                    deleteItem(item)
+                }));
+
+                document.querySelectorAll('.zip__city-name').forEach((item) => {
+                    if (currentZip[0].id === parseInt(item.getAttribute("data-id"))) {
+                        setActive(item);
+                    }
+                });
+            }
         }
-        else {}
+        else {
+            alert('Unfortunately zip code not found :(');
+        }
     }
 
     function addItem(cn) {
@@ -61,7 +66,6 @@ window.onload = function () {
         delButton.setAttribute('data-id', cn.id);
 
         cityDiv.setAttribute('class', 'zip__city');
-        cityDiv.setAttribute('data-id', cn.id);
         cityDiv.appendChild(cityButton);
         cityDiv.appendChild(delButton);
 
@@ -107,4 +111,19 @@ window.onload = function () {
     }
 
     zipForm.addEventListener('submit', addCity);
+
+    function availableCodes(array) {
+        const ul = document.createElement('ul');
+
+        array.forEach((item) => {
+            const li = document.createElement('li');
+
+            li.appendChild(document.createTextNode(`${item.zip} - ${item.city}`));
+            ul.appendChild(li);
+        });
+
+        document.querySelector('footer').appendChild(ul);
+    }
+
+    availableCodes(cities);
 };

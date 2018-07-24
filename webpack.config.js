@@ -97,7 +97,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "./assets/css/[name].css",
             chunkFilename: "[id].css",
-            //publicPath: "../"
         })
     ],
     optimization: {

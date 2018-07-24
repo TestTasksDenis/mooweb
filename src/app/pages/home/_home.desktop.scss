@@ -8,63 +8,72 @@
       size: 24px;
     };
     margin-bottom: 10px;
+    text-align: center;
   }
 
   h4 {
     margin-bottom: 40px;
+    text-align: center;
   }
 
   .zip {
     display: flex;
+    justify-content: center;
 
     .zip__form {
       flex-basis: 300px;
       flex-shrink: 0;
-      padding: 15px;
-      background-color: #ececec;
-      transition: box-shadow 0.4s;
 
-      &:hover {
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+      .form {
+        padding: 15px;
+        background-color: #ececec;
+        transition: box-shadow 0.4s;
+
+        &:hover {
+          box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+        }
       }
     }
 
-    .zip__list {
-      flex-basis: 100%;
+    .zip__cities {
+      flex-basis: 200px;
       padding-left: 25px;
-      display: flex;
-      flex-direction: column;
-      
-      .zip__city {
+
+      .zip__list {
         display: flex;
-        align-items: center;
-        margin-bottom: 5px;
+        flex-direction: column;
 
-        .zip__city-name {
-          cursor: pointer;
-          background-color: #e4f0f5;
-          padding: 3px 5px;
-          border-radius: 3px;
-          border: 1px solid transparent;
-          width: 100px;
+        .zip__city {
+          display: flex;
+          align-items: center;
+          margin-bottom: 5px;
 
-          &.zip__city-name--active {
-            font: {
-              weight: 700;
-            };
-            border: 1px solid #3f87a6;
+          .zip__city-name {
+            cursor: pointer;
+            background-color: #e4f0f5;
+            padding: 3px 5px;
+            border-radius: 3px;
+            border: 1px solid transparent;
+            width: 100px;
+
+            &.zip__city-name--active {
+              font: {
+                weight: 700;
+              };
+              border: 1px solid #3f87a6;
+            }
           }
-        }
 
-        .zip__city-delete {
-          width: 12px;
-          height: 12px;
-          background: url("./img/close.svg") no-repeat center;
-          margin-left: 5px;
-        }
+          .zip__city-delete {
+            width: 12px;
+            height: 12px;
+            background: url("./img/close.svg") no-repeat center;
+            margin-left: 5px;
+          }
 
-        &:last-child {
-          margin-bottom: 0;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }

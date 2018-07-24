@@ -9,7 +9,11 @@
 @import './shared/form';
 
 @import './blocks/header/_header.desktop.scss';
+@import './blocks/footer/footer.desktop';
+
 @import './pages/home/_home.desktop.scss';
 
 @import './blocks/header/_header.mobile.scss';
+@import './blocks/footer/footer.desktop';
+
 @import './pages/home/_home.mobile.scss';

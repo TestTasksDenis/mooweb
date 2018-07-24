@@ -1,0 +1,18 @@
+@media (max-width: 425px) {
+  #home .zip {
+    flex-direction: column;
+  }
+
+  #home .zip .zip__cities,
+  #home .zip .zip__form {
+    flex-basis: auto;
+  }
+
+  #home .zip .zip__form {
+    margin-bottom: 25px;
+  }
+
+  #home .zip .zip__cities {
+    padding-left: 0;
+  }
+}
