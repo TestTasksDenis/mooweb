@@ -32,12 +32,40 @@
     .zip__list {
       flex-basis: 100%;
       padding-left: 25px;
+      display: flex;
+      flex-direction: column;
+      
+      .zip__city {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
 
-      ul {
-        list-style: none;
+        .zip__city-name {
+          cursor: pointer;
+          background-color: #e4f0f5;
+          padding: 3px 5px;
+          border-radius: 3px;
+          border: 1px solid transparent;
+          width: 100px;
+        }
 
-        li {
-          margin-bottom: 5px;
+        .zip__city-delete {
+          width: 18px;
+          height: 18px;
+          background-color: red;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.zip__city--active {
+          .zip__city-name {
+            font: {
+              weight: 700;
+            };
+            border: 1px solid #3f87a6;
+          }
         }
       }
     }

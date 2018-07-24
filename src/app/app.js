@@ -1,14 +1,17 @@
 window.onload = function () {
     const cities = [
         {
+            id: 1,
             zip: 10001,
             city: 'New York'
         },
         {
+            id: 2,
             zip: 88901,
             city: 'Las Vegas'
         },
         {
+            id: 3,
             zip: 98001,
             city: 'Washington'
         }
@@ -21,43 +24,75 @@ window.onload = function () {
 
         const zipInput = parseInt(this.querySelector('#zip-field').value);
         const currentZip = cities.filter(code => code.zip === zipInput);
-        let isDuble = checkDuplicate(currentZip[0].city);
+        const isDuplicate = checkDuplicate(currentZip[0]);
 
-        console.log(isDuble);
-
-        if (currentZip.length > 0) {
-            addItem(currentZip[0].city);
+        if (currentZip.length > 0 && isDuplicate !== -1) {
+            addItem(currentZip[0]);
             clearForm(this);
+
+            document.querySelectorAll('.zip__city').forEach((item) => item.addEventListener('click', () => {
+                setZip(item)
+            }));
+
+            document.querySelectorAll('.zip__city').forEach((item) => {
+                if (currentZip[0].id === parseInt(item.getAttribute("data-id"))) {
+                    setActive(item);
+                }
+            });
         }
         else {}
     }
 
     function addItem(cn) {
-        const country = document.createElement('div');
-        const countryName = document.createTextNode(cn);
+        const cityDiv = document.createElement('div');
+        const cityButton = document.createElement('button');
+        const delButton = document.createElement('button');
+        const countryName = document.createTextNode(cn.city);
 
-        country.setAttribute('class', 'zip__city');
-        country.appendChild(countryName);
-        document.querySelector('.zip__list').appendChild(country);
-    }
+        cityButton.appendChild(countryName);
+        cityButton.setAttribute('class', 'zip__city-name');
+        cityButton.setAttribute('data-id', cn.id);
 
-    function clearForm(form) {
-        // forEach для того, что если добавятся еще поля они все будут очищаться
-        form.querySelectorAll('.form__input--text').forEach((input) => {
-            input.value = ''
-        });
+        delButton.setAttribute('class', 'zip__city-delete');
+        delButton.setAttribute('data-id', cn.id);
+
+        cityDiv.setAttribute('class', 'zip__city');
+        cityDiv.setAttribute('data-id', cn.id);
+        cityDiv.appendChild(cityButton);
+        cityDiv.appendChild(delButton);
+
+        document.querySelector('.zip__list').appendChild(cityDiv);
     }
 
     function checkDuplicate(value) {
         const currentCities = document.querySelectorAll('.zip__city');
 
         for (let i = currentCities.length; i--;) {
-            if (currentCities[i].textContent === value) {
+            if (parseInt(currentCities[i].getAttribute("data-id")) === value.id) {
                 return -1;
             }
         }
 
         return 1;
+    }
+
+    function clearForm(form) {
+        form.querySelectorAll('.form__input--text').forEach((input) => {
+            input.value = '';
+        });
+    }
+
+    function setZip(cityButton) {
+        const zip = cities.filter((item) => item.id === parseInt(cityButton.getAttribute("data-id")));
+
+        document.getElementById('zip-field').value = zip[0].zip;
+
+        setActive(cityButton);
+    }
+
+    function setActive(city) {
+        document.querySelectorAll('.zip__city').forEach((item) => item.classList.remove('zip__city--active'));
+        city.classList.add('zip__city--active');
     }
 
     zipForm.addEventListener('submit', addCity);
